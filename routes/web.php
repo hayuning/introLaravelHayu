@@ -16,8 +16,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });*/
-Route::get('/', 'HomeController@home');
+//Route::get('/', 'HomeController@home');
 
 Route::get('/register', 'AuthController@register');
 
 Route::post('/welcome','AuthController@welcome');
+
+Route::get('/master',function(){
+    return view('layouts.master');
+});
+
+Route::get('/',function(){
+    return view('data-tables.index');
+});
+
+Route::get('/data-tables', function(){
+    return view('data-tables.data-tables');
+});
