@@ -33,3 +33,13 @@ Route::get('/',function(){
 Route::get('/data-tables', function(){
     return view('data-tables.data-tables');
 });
+// Latihan CRUD
+Route::get('/pertanyaan', 'PertanyaanController@index');
+Route::get('/pertanyaan/create', 'PertanyaanController@create');
+Route::post('/pertanyaan', 'PertanyaanController@store');
+Route::get('/pertanyaan/{tanya_id}', 'PertanyaanController@show');
+
+Route::get('/pertanyaan/{tanya_id}/edit', 'PertanyaanController@edit');
+Route::put('/pertanyaan/{tanya_id}', 'PertanyaanController@update');
+Route::delete('/pertanyaan', 'PertanyaanController@destroy');
+
